@@ -4,6 +4,7 @@
       <div class="card-body">
         <h3>New Course</h3>
         <%= form_for @course do |f| %>
+          <%= render "shared/error_messages", resource: @course %>
           <div class="form-group">
             <%= f.label :title %>
             <%= f.text_field :title, class: 'form-control' %>

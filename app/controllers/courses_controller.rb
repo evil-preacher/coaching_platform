@@ -10,4 +10,21 @@ class CoursesController < ApplicationController
   def new
     @course = Course.new
   end
+
+  def create
+    @course = Course.new(courses_params)
+    @course.coach = current_coach
+
+    if @course.save
+      redirect_to courses_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def courses_params
+    params.require(:course).permit(:title, :description, :coach_id)
+  end
 end
