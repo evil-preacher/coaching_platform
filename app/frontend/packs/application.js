@@ -13,3 +13,9 @@ const imagePath = (name) => images(name, true)
 
 const videos = require.context('../videos', true)
 const videoPath = (name) => images(videos, true)
+
+$(document).on('turbolinks:load', function () {
+  $(".flash-block").delay(2000).slideUp(500, function () {
+    $(".flash-block").alert('close');
+  });
+});
