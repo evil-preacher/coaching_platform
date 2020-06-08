@@ -71,3 +71,13 @@ header {
 .alert {
   background-color: $light-red;
 }
+
+.slogan {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-weight: bold;
+  color: #fff;
+  font-size: 3rem;
+}
