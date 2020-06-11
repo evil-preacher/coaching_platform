@@ -25,6 +25,6 @@ class CoursesController < ApplicationController
   private
 
   def courses_params
-    params.require(:course).permit(:title, :description, :coach_id)
+    params.require(:course).permit(:title, :description, :coach_id, attachments: [])
   end
 end
